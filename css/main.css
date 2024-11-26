@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+
+    --c-blue: #013366;
+    --c-bg-extra-light: rgb(250, 249, 248);
+    --c-bg-light: #D8EAFD;
+    --c-txt-light: #FFFFFF;
+    --c-txt-light-hover: #D8EAFD;
+    --c-txt-dark: #2D2D2D;
+    
+    --c-link: #1E5189;
+    --c-link-change: #013366;
+
+    --c-invis: rgba(0,0,0,0);
+
+    --n-radius-big: 4rem;
+
+    transition-property: color, border, background-color, padding, transform, margin, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+:hover, :focus {
+    transition-property: color, border, background-color, padding, transform, margin, opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+html {
+    background-color: var(--c-bg-extra-light);
+}
+
+body {
+    font-family: "BC Sans", Calibri, Arial, "sans serif";
+    font-weight: 400;
+    margin: 0 1rem;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.25rem;
+
+    margin: 0;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 3rem;
+
+    margin: 0;
+    margin-bottom: 0.75rem !important;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    max-width: 60rem;
+    margin-bottom: 2rem !important;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 2rem;
+
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 16px;
+    max-width: 80ch;
+}
+
+a {
+    color: var(--c-link);
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: var(--c-link-change);
+}
+
+img {
+    object-fit: cover;
+}
+
+
+
+/* HEADER --> */
+header {
+    background-color: var(--c-blue);
+    border-radius: .75rem;
+    color: var(--c-txt-light);
+    
+    margin-top: 1rem;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-content: center;
+
+    position: sticky;
+    top: 1rem;
+}
+
+.logo-link {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: fit-content;
+    gap: 2rem;
+    align-content: center;
+    color: var(--c-txt-light);
+}
+
+.logo-link:hover, .logo-link:focus {
+    color: var(--c-txt-light-hover);
+
+    img {
+        transform: rotateZ(360deg);
+        transition-duration: 0.75s;
+    }
+}
+
+.logo-link img {
+    height: 100%;
+    width: auto;
+}
+
+header ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 2rem;
+
+    height: fit-content;
+    margin: auto 0;
+    padding: 0;
+
+    font-weight: 700;
+}
+
+header li {
+    list-style-type: none;
+    font-size: 1.25rem;
+}
+
+.light-link {
+    color: var(--c-txt-light);
+}
+
+.light-link:hover, .light-link:focus {
+    color: var(--c-txt-light-hover);
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
+    text-decoration-skip: 10px;
+}
+/* <-- HEADER */
+
+/* CONTENT WRAPPER --> */
+.content-wrapper {
+    max-width: 125rem;
+    margin: 0 auto;
+}
+
+/* <-- CONTENT WRAPPER */
+
+/* HERO SECTION --> */
+#hero {
+    background-color: var(--c-bg-light);
+    border-radius: var(--n-radius-big);
+
+    height: 40rem;
+    padding: 5rem 5rem 0 5rem;
+    margin: 5rem 3rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+#hero > * {
+    margin: auto 0;
+}
+
+#hero hgroup {
+    padding-bottom: 5rem;
+}
+
+.cta {
+    width: fit-content;
+    max-height: 35rem;
+    display: block;
+    overflow: clip;
+
+    margin: 0 0 0 auto;
+}
+
+.cta img {
+    width: 100%;
+    max-height: 35rem;
+}
+
+.cta:hover img,
+.cta:focus img {
+    content: url('../img/cta-hover.png');
+}
+
+/* <-- HERO SECTION */
+
+/* ABOUT SECTION --> */
+#about {
+    margin: 0 3rem;
+}
+
+.about-summary {
+    margin: 7rem 5rem 5rem 5rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0;
+}
+
+.features li {
+    height: fit-content;
+    background-color: var(--c-bg-light);
+    padding: 5rem 10%;
+    width: 100%;
+    border-radius: var(--n-radius-big);
+    list-style-type: none;
+}
+
+.features li img {
+    width: 100%;
+    height: auto;
+    padding: 0 15%;
+    margin-bottom: 2rem;
+}

@@ -1,0 +1,10 @@
+@font-face {
+   font-family: '2023_01_01_BCSans-Bold_2f';
+   font-display: swap;
+   src: url('2023_01_01_BCSans-Bold_2f/font.woff2');
+}
+@font-face {
+   font-family: '2023_01_01_BCSans-Regular_2f';
+   font-display: swap;
+   src: url('2023_01_01_BCSans-Regular_2f/font.woff2');
+}
